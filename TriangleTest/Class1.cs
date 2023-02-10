@@ -52,6 +52,46 @@ namespace TriangleTest
             string actual = t1.AnalyzeTriangle(3, 4, 5);
             Assert.AreEqual(expected, actual);
         }
+        [Test]
+        public void Method6_Scalene_triangle()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(5, 12, 13);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method7_Scalene_triangle()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(8, 15, 17);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method8_Scalene_triangle()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(6, 7, 9);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method9_Scalene_triangle()
+        {
+            string expected = "Based on all three sides being different, the type of triangle is a SCALENE";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(11, 14, 16);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method10_Zero_Length()
+        {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(0, 14, 16);
+            Assert.AreEqual(expected, actual);
+        }
       
         
     }
