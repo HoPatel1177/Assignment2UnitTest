@@ -92,7 +92,45 @@ namespace TriangleTest
             string actual = t1.AnalyzeTriangle(0, 14, 16);
             Assert.AreEqual(expected, actual);
         }
-      
-        
+        [Test]
+        public void Method11_Zero_Length()
+        {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(0, 0, 16);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method12_Zero_Length()
+        {
+            string expected = "At least one side of your triangle has a zero length and is thus invalid";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(0, 0, 0);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method13_Invalid_Input()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(1,1, 3);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method14_Invalid_Input()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(2, 4, 7);
+            Assert.AreEqual(expected, actual);
+        }
+        [Test]
+        public void Method15_Invalid_Input()
+        {
+            string expected = "Based on the values entered, the triangle is INVALID";
+            Triangle t1 = new Triangle();
+            string actual = t1.AnalyzeTriangle(5, 6, 11);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
